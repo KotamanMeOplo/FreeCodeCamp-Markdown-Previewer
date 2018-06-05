@@ -8,9 +8,9 @@ const Input = styled.textarea`
   resize: none;
   outline: none;
   width: 100%;
-  height: 322px;
+  height: 622px;
   box-sizing: border-box;
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding: 10px;
   margin: 0;
 `
@@ -20,7 +20,7 @@ export default class Editor extends Component {
     return (
       <WindowWrapper>
         <WindowHeader>Editor</WindowHeader>
-        <Input id="editor" />
+        <Input id="editor" value={ this.props.text } onChange={ this.props.changeHandler } spellCheck={ false } />
       </WindowWrapper>
     );
   }

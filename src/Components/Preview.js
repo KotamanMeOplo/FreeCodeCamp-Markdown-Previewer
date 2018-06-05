@@ -5,9 +5,9 @@ import { WindowWrapper, WindowHeader } from './StyledComponents';
 const WindowContentWrapper = styled.div`
   border: 1px solid rgba(27,31,35,0.15);
   border-radius: 0 0 3px 3px;
-  height: 300px;
-  font-size: 1.25rem;
+  height: 600px;
   padding: 10px;
+  overflow: scroll;
 `;
 
 export default class Preview extends Component {
@@ -15,7 +15,7 @@ export default class Preview extends Component {
     return (
       <WindowWrapper>
         <WindowHeader>Preview</WindowHeader>
-        <WindowContentWrapper id='preview' />
+        <WindowContentWrapper id='preview' dangerouslySetInnerHTML={{__html:this.props.markdown}} />
       </WindowWrapper>
     )
   }
