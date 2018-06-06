@@ -3,6 +3,7 @@ import Editor from './Components/Editor.js';
 import Preview from './Components/Preview.js';
 import styled from 'styled-components';
 import marked from 'marked';
+import './markdown.css';
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,7 +21,7 @@ export default class App extends Component {
 [Here's a Wikipedia article](https://en.wikipedia.org/wiki/Object-oriented_programming)
 
 You can do a lot of interesting things with OOP like creating a cat object with a bunch of properties like color, name and gender
-\`\`\`javascript
+\`\`\`js
 let cat = {
   color: 'white',
   name: 'Milko',
