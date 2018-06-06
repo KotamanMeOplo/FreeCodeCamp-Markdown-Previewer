@@ -7,10 +7,14 @@ import './markdown.css';
 
 const Wrapper = styled.div`
   display: flex;
-  font-size: 16px;
+  font-size: 1rem;
   justify-content: space-evenly;
   flex-flow: row wrap;
-  align-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 950px){
+    flex-direction: column;
+  }
 `;
 
 export default class App extends Component {
@@ -56,7 +60,6 @@ Some Object Oriented Programming Languages are:
       markdown: marked(e.target.value),
       text: e.target.value
     });
-    console.log(this.state.markdown);
   }
 
   render() {

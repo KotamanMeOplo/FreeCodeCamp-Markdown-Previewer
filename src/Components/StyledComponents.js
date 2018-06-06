@@ -3,8 +3,11 @@ import styled from 'styled-components';
 const WindowWrapper = styled.div`
   top: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  width: 40rem;
-  margin: 2rem;
+  width: 45%;
+
+  @media only screen and (max-width: 950px){
+    width: 100%;
+  }
 `;
 
 const WindowHeader = styled.h3`
